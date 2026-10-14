@@ -96,55 +96,35 @@
 <main id="main">
 
 <section class="hero" id="top">
-  <!-- Hero scene: dawn light + hanging foliage + distant cup. Swap this SVG for a real photo later. -->
-  <div class="hero__bg" aria-hidden="true">
-    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-      <rect width="1600" height="1000" fill="url(#sunrise)"/>
-      <rect width="1600" height="1000" fill="url(#light)" style="mix-blend-mode:screen"/>
-      <!-- Distant hills -->
-      <path d="M0 720 Q 300 650 600 700 T 1200 690 T 1600 710 L1600 1000 L0 1000 Z" fill="#1F3B2D" opacity="0.75"/>
-      <path d="M0 800 Q 400 720 800 790 T 1600 770 L1600 1000 L0 1000 Z" fill="#0F2318"/>
-      <!-- Steam ribbons rising -->
-      <g opacity="0.35" style="mix-blend-mode:screen">
-        <path d="M820 500 C 790 400, 870 350, 830 240 S 790 100, 830 20" stroke="#F6EFDE" stroke-width="2" fill="none"/>
-        <path d="M870 520 C 920 420, 850 350, 900 240 S 920 100, 880 10"   stroke="#F6EFDE" stroke-width="2" fill="none"/>
-      </g>
-      <!-- Low hanging leaves silhouette, top -->
-      <g fill="#0F2318" opacity="0.9">
-        <path d="M0 0 Q 180 110 90 230 Q 10 180 0 100 Z"/>
-        <path d="M120 0 Q 320 180 230 320 Q 140 240 120 100 Z"/>
-        <path d="M1600 0 Q 1480 60 1510 220 Q 1600 180 1600 40 Z"/>
-        <path d="M1500 0 Q 1370 190 1450 340 Q 1550 240 1550 80 Z"/>
-        <ellipse cx="1430" cy="90" rx="90" ry="30" transform="rotate(20 1430 90)"/>
-        <ellipse cx="80" cy="140" rx="110" ry="38" transform="rotate(-15 80 140)"/>
-      </g>
-      <!-- Pour-over silhouette, center distance -->
-      <g transform="translate(760 540)" fill="#0F2318">
-        <path d="M60 0 h40 l-10 55 h-20 Z"/> <!-- dripper -->
-        <rect x="55" y="55" width="50" height="60" rx="4"/> <!-- carafe neck -->
-        <path d="M30 115 Q 80 165 130 115 L120 180 Q 80 220 40 180 Z"/> <!-- bulb -->
-      </g>
-    </svg>
-    <div class="hero__scrim"></div>
-  </div>
-  <div class="hero__content">
-    <p class="hero__eyebrow reveal">Est. in Bhimavaram</p>
-    <h1 class="hero__title">
-      <span class="word reveal reveal--delay-1">Thoughtfully</span>
-      <span class="word reveal reveal--delay-2">brewed.</span>
-      <span class="word reveal reveal--delay-3 italic">Beautifully</span>
-      <span class="word reveal reveal--delay-4 italic">served.</span>
-    </h1>
-    <p class="hero__sub reveal reveal--delay-5">Made for your everyday rituals — pour‑over coffee, slow mornings, and a garden to sit in.</p>
-    <div class="hero__actions reveal reveal--delay-6">
-      <a href="#menu" class="btn btn--primary">See the menu</a>
-      <a href="#visit" class="btn btn--ghost">Find us</a>
-    </div>
-  </div>
-  <a href="#story" class="hero__scroll" aria-label="Scroll to story">
-    <span>Scroll</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v14m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- Grid background with radial mask -->
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <!-- Radial accent (big glowing disc at the bottom) -->
+  <div class="hero__radial" aria-hidden="true"></div>
+
+  <!-- Eyebrow pill -->
+  <a href="#story" class="hero__eyebrow-link">
+    <span class="hero__eyebrow-pill">
+      Est. in Bhimavaram
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
   </a>
+
+  <!-- Title -->
+  <h1 class="hero__title">Thoughtfully brewed, beautifully served.</h1>
+
+  <!-- Subtitle -->
+  <p class="hero__sub">Made for your everyday rituals — pour‑over coffee, slow mornings, and a garden to sit in.</p>
+
+  <!-- CTA -->
+  <div class="hero__cta-wrap">
+    <a href="#menu" class="hero__cta">See the menu</a>
+  </div>
+
+  <!-- Bottom fade — bridges the hero into the next section's warm paper tone -->
+  <div class="hero__bottom-fade" aria-hidden="true"></div>
 </section>
 
 <section class="story" id="story">
