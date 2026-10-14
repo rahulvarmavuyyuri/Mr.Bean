@@ -102,6 +102,9 @@
   <!-- Radial accent (big glowing disc at the bottom) -->
   <div class="hero__radial" aria-hidden="true"></div>
 
+  <!-- 3D coffee beans (Three.js) -->
+  <canvas id="beans" class="hero__beans" aria-hidden="true"></canvas>
+
   <!-- Eyebrow pill -->
   <a href="#story" class="hero__eyebrow-link">
     <span class="hero__eyebrow-pill">
@@ -204,7 +207,7 @@
   </div>
 
   <div class="menu__group reveal">
-    <h3 class="menu__title"><span>From the bar</span></h3>
+    <h3 class="menu__title"><span><svg class="menu__title-bean" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><ellipse cx="16" cy="16" rx="11" ry="7" transform="rotate(-25 16 16)" fill="currentColor"/><path d="M8 20 Q 16 10 24 12" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none" stroke-linecap="round" transform="rotate(-25 16 16)"/></svg>From the bar</span></h3>
     <ul class="menu__list">
       <li class="menu__item">
         <div class="menu__row"><span class="menu__name">Araku Pour‑over</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹220</span></div>
@@ -226,7 +229,7 @@
   </div>
 
   <div class="menu__group reveal">
-    <h3 class="menu__title"><span>From the kitchen</span></h3>
+    <h3 class="menu__title"><span><svg class="menu__title-bean" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><ellipse cx="16" cy="16" rx="11" ry="7" transform="rotate(-25 16 16)" fill="currentColor"/><path d="M8 20 Q 16 10 24 12" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none" stroke-linecap="round" transform="rotate(-25 16 16)"/></svg>From the kitchen</span></h3>
     <ul class="menu__list">
       <li class="menu__item">
         <div class="menu__row"><span class="menu__name">Avocado on Sourdough</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹320</span></div>
@@ -546,5 +549,15 @@
 </footer>
 
 <script src="script.js" defer></script>
+
+<!-- Three.js resolved through an import map so the module imports cleanly -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+  }
+}
+</script>
+<script type="module" src="beans.js"></script>
 </body>
 </html>
