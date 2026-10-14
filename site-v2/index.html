@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mr. Bean Coffee</title>
+<meta name="description" content="Mr. Bean is a specialty coffee café in Hyderabad. Thoughtfully brewed. Beautifully served. Made for your everyday rituals. Open daily, 6 am to 9 pm." />
+<meta name="theme-color" content="#140D09" />
+<meta property="og:title" content="Mr. Bean Coffee, Hyderabad" />
+<meta property="og:description" content="Thoughtfully brewed. Beautifully served. Made for your everyday rituals." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=70" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+<link rel="preload" as="image"
+  imagesrcset="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=70 800w,
+               https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=70 1400w,
+               https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=70 2000w"
+  imagesizes="100vw" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Mr. Bean, back to top">Mr. Bean</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#craft">Craft</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn--crema nav__cta" href="#reserve">Reserve a table</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="sr-only">Open menu</span>
+      <span class="nav__bar" aria-hidden="true"></span>
+      <span class="nav__bar" aria-hidden="true"></span>
+    </button>
+  </div>
+  <nav class="mnav" id="mobile-nav" aria-label="Mobile" hidden>
+    <a href="#menu">Menu</a>
+    <a href="#craft">Craft</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a class="btn btn--crema" href="#reserve">Reserve a table</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <figure class="hero__media photo">
+      <img class="hero__img"
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=70"
+        srcset="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=70 800w,
+                https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=70 1400w,
+                https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=70 2000w"
+        sizes="100vw" width="2000" height="1333"
+        alt="A cup of coffee on a dark wooden table in low, warm light"
+        fetchpriority="high" decoding="async" />
+    </figure>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span>Thoughtfully brewed.</span></span>
+        <span class="line"><span>Beautifully served.</span></span>
+      </h1>
+      <div class="hero__foot">
+        <p class="hero__sub">Made for your everyday rituals. Specialty coffee, Irani chai and slow mornings in Hyderabad.</p>
+        <div class="hero__aside">
+          <p class="status" data-status>
+            <span class="status__dot" aria-hidden="true"></span>
+            <span class="status__text">Open daily, 6 am to 9 pm</span>
+          </p>
+          <a class="btn btn--crema" href="#reserve">Reserve a table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUALS / MANIFESTO -->
+  <section class="ritual" aria-labelledby="ritual-title">
+    <div class="ritual__grid">
+      <div class="ritual__text">
+        <h2 class="h2" id="ritual-title">A cup worth slowing down for.</h2>
+        <p class="ritual__lead">
+          Mr. Bean is a small coffee bar for people who notice the details: the bloom on a fresh pour,
+          the weight of a warm cup, the quiet before the city wakes up.
+        </p>
+        <p class="ritual__body">
+          We brew Indian single-origins from Araku and Chikmagalur, pull every shot by hand, and keep the
+          menu short so everything on it is worth ordering. Come for the first cup at six. Stay for the second.
+        </p>
+      </div>
+      <div class="ritual__photos">
+        <figure class="photo photo--tall reveal-media">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=70"
+            srcset="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=70 600w,
+                    https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=70 900w"
+            sizes="(min-width: 960px) 30vw, 60vw" width="900" height="1125"
+            alt="Latte art in a ceramic cup" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo photo--small reveal-media">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=70"
+            srcset="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=500&q=70 500w,
+                    https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=70 700w"
+            sizes="(min-width: 960px) 20vw, 40vw" width="700" height="700"
+            alt="Freshly roasted coffee beans" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE POUR (signature scroll moment) -->
+  <section class="pour" id="craft" aria-labelledby="pour-title">
+    <div class="pour__stage">
+      <figure class="pour__media photo">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1600&q=70"
+          srcset="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=70 800w,
+                  https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1600&q=70 1600w"
+          sizes="100vw" width="1600" height="1067"
+          alt="Close-up of a freshly poured coffee" loading="lazy" decoding="async" />
+      </figure>
+      <div class="pour__shade" aria-hidden="true"></div>
+
+      <div class="pour__copy">
+        <h2 class="pour__title" id="pour-title">Every cup starts long before the pour.</h2>
+        <ol class="pour__steps">
+          <li class="pour__step">
+            <h3>Sourced by season</h3>
+            <p>Single-origin beans from estates in Araku Valley and Chikmagalur, chosen for what is tasting best right now.</p>
+          </li>
+          <li class="pour__step">
+            <h3>Roasted in small batches</h3>
+            <p>Light enough to keep the fruit, rested for a week so every shot pulls sweet and even.</p>
+          </li>
+          <li class="pour__step">
+            <h3>Poured to order</h3>
+            <p>Ground fresh for each cup and brewed by hand. Nothing waits on a warmer.</p>
+          </li>
+        </ol>
+        <div class="pour__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu" aria-labelledby="menu-title">
+    <div class="menu__head">
+      <h2 class="h2" id="menu-title">Short, seasonal, made to order.</h2>
+    </div>
+
+    <div class="menu__body">
+      <div class="menu__photos" aria-hidden="true">
+        <figure class="photo menu__photo is-active" data-photo-for="coffee">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=900&q=70"
+            width="900" height="1125" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo menu__photo" data-photo-for="chai">
+          <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=70"
+            width="900" height="1125" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo menu__photo" data-photo-for="kitchen">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=70"
+            width="900" height="1125" alt="" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="menu__list">
+        <div class="tabs" role="tablist" aria-label="Menu sections">
+          <button class="tab" role="tab" type="button" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true" data-tab="coffee">Coffee</button>
+          <button class="tab" role="tab" type="button" id="tab-chai" aria-controls="panel-chai" aria-selected="false" tabindex="-1" data-tab="chai">Chai &amp; more</button>
+          <button class="tab" role="tab" type="button" id="tab-kitchen" aria-controls="panel-kitchen" aria-selected="false" tabindex="-1" data-tab="kitchen">Kitchen</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="panel-coffee" aria-labelledby="tab-coffee" tabindex="0">
+          <ul class="items">
+            <li class="item"><div class="item__row"><h3>Espresso</h3><span class="item__price">₹160</span></div><p>A double shot of the house blend. Dark chocolate, jaggery, a clean finish.</p></li>
+            <li class="item"><div class="item__row"><h3>Cappuccino</h3><span class="item__price">₹220</span></div><p>Equal parts espresso, silky milk and foam, served in a warm cup.</p></li>
+            <li class="item"><div class="item__row"><h3>Araku pour-over</h3><span class="item__price">₹280</span></div><p>Hand-brewed single origin. Floral, bright, best taken black.</p></li>
+            <li class="item"><div class="item__row"><h3>Filter kaapi</h3><span class="item__price">₹140</span></div><p>Coffee and chicory decoction, frothed between tumbler and dabarah.</p></li>
+            <li class="item"><div class="item__row"><h3>Cold brew</h3><span class="item__price">₹260</span></div><p>Steeped for eighteen hours and poured over one large clear cube.</p></li>
+            <li class="item"><div class="item__row"><h3>Iced jaggery latte</h3><span class="item__price">₹240</span></div><p>Espresso, cold milk and a spoon of palm jaggery syrup.</p></li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-chai" aria-labelledby="tab-chai" tabindex="0" hidden>
+          <ul class="items">
+            <li class="item"><div class="item__row"><h3>Irani chai</h3><span class="item__price">₹90</span></div><p>Slow-boiled with thickened milk, the old Hyderabad way.</p></li>
+            <li class="item"><div class="item__row"><h3>Masala chai</h3><span class="item__price">₹110</span></div><p>Assam leaf with ginger, cardamom and a little black pepper.</p></li>
+            <li class="item"><div class="item__row"><h3>Hot chocolate</h3><span class="item__price">₹220</span></div><p>Dark Indian chocolate melted into steamed milk. Not too sweet.</p></li>
+            <li class="item"><div class="item__row"><h3>Kokum cooler</h3><span class="item__price">₹180</span></div><p>Kokum, lime and soda over ice. Bright, salty, cooling.</p></li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-kitchen" aria-labelledby="tab-kitchen" tabindex="0" hidden>
+          <ul class="items">
+            <li class="item"><div class="item__row"><h3>Osmania biscuit tiramisu</h3><span class="item__price">₹260</span></div><p>Our Hyderabadi twist: espresso-soaked Osmania biscuits layered with mascarpone.</p></li>
+            <li class="item"><div class="item__row"><h3>Bun maska</h3><span class="item__price">₹120</span></div><p>Soft bun, thick salted butter. Made for dunking in chai.</p></li>
+            <li class="item"><div class="item__row"><h3>Butter croissant</h3><span class="item__price">₹180</span></div><p>Baked every morning. Flaky, golden, gone by eleven.</p></li>
+            <li class="item"><div class="item__row"><h3>Avocado on sourdough</h3><span class="item__price">₹340</span></div><p>Smashed avocado, chilli crisp and a soft egg on toasted sourdough.</p></li>
+          </ul>
+        </div>
+
+        <p class="menu__note">Prices include taxes. Ask us about dairy-free milks and today's single origin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote" aria-label="Our philosophy">
+    <blockquote class="quote__text">
+      <p>Good coffee is a small, daily kindness. We just try to make it a little more beautiful.</p>
+    </blockquote>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+    <div class="gallery__head">
+      <h2 class="h2" id="gallery-title">Warm light, quiet corners.</h2>
+      <a class="link" href="https://instagram.com/rahul.vuyyuri" rel="noopener" target="_blank">See more on Instagram</a>
+    </div>
+    <div class="gallery__grid">
+      <figure class="photo g g--a reveal-media">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=70"
+          srcset="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=70 700w,
+                  https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=70 1200w"
+          sizes="(min-width: 960px) 60vw, 100vw" width="1200" height="800"
+          alt="The café interior with warm pendant lights" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="photo g g--b reveal-media">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=70"
+          width="800" height="1000" alt="A coffee cup on a saucer from above" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="photo g g--c reveal-media">
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=70"
+          width="800" height="1000" alt="A quiet seating corner by the window" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="photo g g--d reveal-media">
+        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=70"
+          width="800" height="800" alt="Breakfast plate with toast and fruit" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="photo g g--e reveal-media">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=70"
+          srcset="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=70 700w,
+                  https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=70 1200w"
+          sizes="(min-width: 960px) 60vw, 100vw" width="1200" height="800"
+          alt="The coffee bar and counter" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- VISIT + RESERVE -->
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="visit__grid">
+      <div class="visit__info">
+        <h2 class="h2" id="visit-title">From the first cup to the last.</h2>
+
+        <dl class="facts">
+          <div class="fact">
+            <dt>Where</dt>
+            <dd>Mr. Bean Coffee<br />Hyderabad, Telangana</dd>
+          </div>
+          <div class="fact">
+            <dt>When</dt>
+            <dd>Every day<br />6:00 am to 9:00 pm</dd>
+          </div>
+          <div class="fact">
+            <dt>Call or WhatsApp</dt>
+            <dd><a href="tel:+919573031888">+91 95730 31888</a></dd>
+          </div>
+          <div class="fact">
+            <dt>Instagram</dt>
+            <dd><a href="https://instagram.com/rahul.vuyyuri" rel="noopener" target="_blank">@rahul.vuyyuri</a></dd>
+          </div>
+        </dl>
+
+        <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Mr+Bean+Coffee+Hyderabad" rel="noopener" target="_blank">Get directions in Google Maps</a>
+      </div>
+
+      <div class="reserve" id="reserve">
+        <h3 class="reserve__title">Reserve a table</h3>
+        <p class="reserve__hint">Send us your details and we'll confirm on WhatsApp.</p>
+
+        <form class="form" id="reserve-form" novalidate>
+          <div class="field">
+            <label for="r-name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="r-name" name="name" type="text" autocomplete="name" required aria-describedby="r-name-err" />
+            <p class="field__error" id="r-name-err" role="alert"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="r-date">Date <span class="req" aria-hidden="true">*</span></label>
+              <input id="r-date" name="date" type="date" required aria-describedby="r-date-err" />
+              <p class="field__error" id="r-date-err" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="r-time">Time <span class="req" aria-hidden="true">*</span></label>
+              <input id="r-time" name="time" type="time" min="06:00" max="20:30" step="900" required aria-describedby="r-time-help r-time-err" />
+              <p class="field__help" id="r-time-help">Between 6:00 am and 8:30 pm</p>
+              <p class="field__error" id="r-time-err" role="alert"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-guests">Guests</label>
+            <select id="r-guests" name="guests">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="r-note">Anything we should know? <span class="opt">(optional)</span></label>
+            <textarea id="r-note" name="note" rows="2"></textarea>
+          </div>
+          <button class="btn btn--crema btn--block" type="submit">Send request on WhatsApp</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <p class="foot__brand">Mr. Bean</p>
+    <p class="foot__tag">Thoughtfully brewed. Beautifully served.</p>
+    <ul class="foot__links">
+      <li><a href="https://instagram.com/rahul.vuyyuri" rel="noopener" target="_blank">Instagram</a></li>
+      <li><a href="https://wa.me/919573031888" rel="noopener" target="_blank">WhatsApp</a></li>
+      <li><a href="tel:+919573031888">Call us</a></li>
+    </ul>
+    <p class="foot__meta">© <span data-year></span> Mr. Bean Coffee, Hyderabad</p>
+  </div>
+</footer>
+
+<div class="grain" aria-hidden="true"></div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
