@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mr. Bean — a garden café in Bhimavaram</title>
+<meta name="description" content="Mr. Bean is a garden café in Bhimavaram, open 6 am to 9 pm. Thoughtfully brewed. Beautifully served. Made for your everyday rituals." />
+<meta name="theme-color" content="#0F2318" />
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Shared SVG defs: gradients, patterns, filters used across the page -->
+<svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;overflow:hidden">
+  <defs>
+    <linearGradient id="sunrise" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6D9A1"/>
+      <stop offset="0.45" stop-color="#DCA86B"/>
+      <stop offset="1" stop-color="#2E5A42"/>
+    </linearGradient>
+    <linearGradient id="moss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E5A42"/>
+      <stop offset="1" stop-color="#0F2318"/>
+    </linearGradient>
+    <linearGradient id="paperWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EFDE"/>
+      <stop offset="1" stop-color="#E5D7B8"/>
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D7B577"/>
+      <stop offset="1" stop-color="#8A6A2E"/>
+    </linearGradient>
+    <linearGradient id="steam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#F6EFDE" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F6EFDE" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="light" cx="30%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#F8E2B3" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#F8E2B3" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="jaali" x="0" y="0" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M23 0 V46 M0 23 H46" stroke="#F3EEE1" stroke-width="0.8" stroke-opacity="0.18" fill="none"/>
+      <circle cx="23" cy="23" r="3" fill="#F3EEE1" fill-opacity="0.1"/>
+    </pattern>
+    <pattern id="rings" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="30" stroke="#8A6A2E" stroke-opacity="0.15" fill="none"/>
+      <circle cx="40" cy="40" r="18" stroke="#8A6A2E" stroke-opacity="0.12" fill="none"/>
+      <circle cx="40" cy="40" r="8"  stroke="#8A6A2E" stroke-opacity="0.1"  fill="none"/>
+    </pattern>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav__wrap">
+    <a href="#top" class="nav__brand" aria-label="Mr. Bean, home">
+      <svg class="nav__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <path d="M24 6c-6.6 0-11 4.6-11 11 0 5.5 3.6 9.6 7 11.6-1 2-2 4-2 6 0 4 3 7 6 7s6-3 6-7c0-2-1-4-2-6 3.4-2 7-6.1 7-11.6 0-6.4-4.4-11-11-11Zm0 3c5 0 8 4 8 8 0 5-4 9-8 9s-8-4-8-9c0-4 3-8 8-8Z" fill="currentColor"/>
+        <path d="M22 14c-3 1-5 3-5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="nav__name">Mr. Bean</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#events">Events</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav__cta" href="https://wa.me/919573031888" rel="noopener">Reserve a table</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mnav" id="mnav" hidden>
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#events">Events</a>
+    <a href="#visit">Visit</a>
+    <a class="nav__cta" href="https://wa.me/919573031888" rel="noopener">Reserve a table</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <!-- Hero scene: dawn light + hanging foliage + distant cup. Swap this SVG for a real photo later. -->
+  <div class="hero__bg" aria-hidden="true">
+    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+      <rect width="1600" height="1000" fill="url(#sunrise)"/>
+      <rect width="1600" height="1000" fill="url(#light)" style="mix-blend-mode:screen"/>
+      <!-- Distant hills -->
+      <path d="M0 720 Q 300 650 600 700 T 1200 690 T 1600 710 L1600 1000 L0 1000 Z" fill="#1F3B2D" opacity="0.75"/>
+      <path d="M0 800 Q 400 720 800 790 T 1600 770 L1600 1000 L0 1000 Z" fill="#0F2318"/>
+      <!-- Steam ribbons rising -->
+      <g opacity="0.35" style="mix-blend-mode:screen">
+        <path d="M820 500 C 790 400, 870 350, 830 240 S 790 100, 830 20" stroke="#F6EFDE" stroke-width="2" fill="none"/>
+        <path d="M870 520 C 920 420, 850 350, 900 240 S 920 100, 880 10"   stroke="#F6EFDE" stroke-width="2" fill="none"/>
+      </g>
+      <!-- Low hanging leaves silhouette, top -->
+      <g fill="#0F2318" opacity="0.9">
+        <path d="M0 0 Q 180 110 90 230 Q 10 180 0 100 Z"/>
+        <path d="M120 0 Q 320 180 230 320 Q 140 240 120 100 Z"/>
+        <path d="M1600 0 Q 1480 60 1510 220 Q 1600 180 1600 40 Z"/>
+        <path d="M1500 0 Q 1370 190 1450 340 Q 1550 240 1550 80 Z"/>
+        <ellipse cx="1430" cy="90" rx="90" ry="30" transform="rotate(20 1430 90)"/>
+        <ellipse cx="80" cy="140" rx="110" ry="38" transform="rotate(-15 80 140)"/>
+      </g>
+      <!-- Pour-over silhouette, center distance -->
+      <g transform="translate(760 540)" fill="#0F2318">
+        <path d="M60 0 h40 l-10 55 h-20 Z"/> <!-- dripper -->
+        <rect x="55" y="55" width="50" height="60" rx="4"/> <!-- carafe neck -->
+        <path d="M30 115 Q 80 165 130 115 L120 180 Q 80 220 40 180 Z"/> <!-- bulb -->
+      </g>
+    </svg>
+    <div class="hero__scrim"></div>
+  </div>
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal">Est. in Bhimavaram</p>
+    <h1 class="hero__title">
+      <span class="word reveal reveal--delay-1">Thoughtfully</span>
+      <span class="word reveal reveal--delay-2">brewed.</span>
+      <span class="word reveal reveal--delay-3 italic">Beautifully</span>
+      <span class="word reveal reveal--delay-4 italic">served.</span>
+    </h1>
+    <p class="hero__sub reveal reveal--delay-5">Made for your everyday rituals — pour‑over coffee, slow mornings, and a garden to sit in.</p>
+    <div class="hero__actions reveal reveal--delay-6">
+      <a href="#menu" class="btn btn--primary">See the menu</a>
+      <a href="#visit" class="btn btn--ghost">Find us</a>
+    </div>
+  </div>
+  <a href="#story" class="hero__scroll" aria-label="Scroll to story">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v14m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<section class="story" id="story">
+  <div class="story__grid">
+    <figure class="story__fig reveal" aria-label="Illustration of a pour-over setup">
+      <!-- Illustrated scene: a brewer on a wooden counter, soft light. -->
+      <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+        <rect width="800" height="1000" fill="url(#paperWarm)"/>
+        <rect width="800" height="1000" fill="url(#rings)" opacity="0.7"/>
+        <!-- window light -->
+        <rect x="60" y="80" width="300" height="420" rx="6" fill="#F8E2B3" opacity="0.55"/>
+        <rect x="60" y="80" width="300" height="420" rx="6" fill="none" stroke="#8A6A2E" stroke-opacity="0.35"/>
+        <line x1="210" y1="80" x2="210" y2="500" stroke="#8A6A2E" stroke-opacity="0.35"/>
+        <line x1="60" y1="290" x2="360" y2="290" stroke="#8A6A2E" stroke-opacity="0.35"/>
+        <!-- hanging plant -->
+        <g transform="translate(540 60)">
+          <line x1="30" y1="0" x2="30" y2="160" stroke="#214F3E" stroke-width="2"/>
+          <ellipse cx="30" cy="190" rx="70" ry="18" fill="#8A6A2E"/>
+          <g fill="#214F3E">
+            <path d="M-20 190 Q -60 240 -20 300 Q 10 260 -20 190Z"/>
+            <path d="M30 200 Q 10 320 50 360 Q 60 290 30 200Z"/>
+            <path d="M80 200 Q 120 260 90 330 Q 60 270 80 200Z"/>
+            <path d="M60 190 Q 80 320 40 400 Q 20 320 60 190Z"/>
+          </g>
+        </g>
+        <!-- counter -->
+        <rect x="0" y="720" width="800" height="280" fill="#8A6A2E"/>
+        <rect x="0" y="720" width="800" height="20" fill="#B38B47"/>
+        <rect x="0" y="720" width="800" height="280" fill="#0F2318" opacity="0.08"/>
+        <!-- brewer -->
+        <g transform="translate(330 500)">
+          <!-- steam -->
+          <g opacity="0.55" style="mix-blend-mode:screen">
+            <path d="M70 -30 C 50 -90 110 -130 70 -200" stroke="#F6EFDE" stroke-width="3" fill="none"/>
+            <path d="M110 -40 C 150 -100 90 -140 130 -210" stroke="#F6EFDE" stroke-width="3" fill="none"/>
+          </g>
+          <!-- V60 cone -->
+          <path d="M30 0 L170 0 L120 90 L80 90 Z" fill="#F3EEE1" stroke="#0F2318" stroke-width="2"/>
+          <!-- carafe -->
+          <path d="M60 90 L140 90 L150 230 Q 100 260 50 230 Z" fill="#F3EEE1" stroke="#0F2318" stroke-width="2"/>
+          <!-- coffee inside -->
+          <path d="M60 180 L140 180 L148 228 Q 100 258 52 228 Z" fill="#2A1A0F"/>
+          <!-- handle -->
+          <path d="M150 110 Q 185 130 150 170" stroke="#0F2318" stroke-width="2" fill="none"/>
+          <!-- counter shadow -->
+          <ellipse cx="100" cy="250" rx="110" ry="10" fill="#0F2318" opacity="0.25"/>
+        </g>
+        <!-- small cup to the right -->
+        <g transform="translate(560 640)">
+          <path d="M0 0 h110 v10 Q 55 90 0 10 Z" fill="#F3EEE1" stroke="#0F2318" stroke-width="2"/>
+          <ellipse cx="55" cy="6" rx="55" ry="6" fill="#2A1A0F"/>
+          <path d="M105 20 Q 135 25 115 55" stroke="#0F2318" stroke-width="2" fill="none"/>
+          <ellipse cx="55" cy="80" rx="60" ry="6" fill="#0F2318" opacity="0.25"/>
+        </g>
+      </svg>
+    </figure>
+    <div class="story__text">
+      <p class="eyebrow reveal">Our story</p>
+      <h2 class="h2 reveal reveal--delay-1">A green corner for coffee, done the slow way.</h2>
+      <p class="lead reveal reveal--delay-2">
+        <span class="dropcap">M</span>r. Bean began the way most good things do — with a kettle,
+        a notebook of recipes, and a few leafy plants by a window in Bhimavaram.
+        We roast carefully, pour by hand, and plate with the same attention a home-cooked meal deserves.
+      </p>
+      <p class="reveal reveal--delay-3">
+        Sit under the trellis. Watch the morning turn gold. Order a second cup. It is that kind of place.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="menu__intro">
+    <p class="eyebrow reveal">The menu</p>
+    <h2 class="h2 reveal reveal--delay-1">A short, honest menu.</h2>
+    <p class="reveal reveal--delay-2 menu__sub">Changing with the seasons. Everything made to order.</p>
+  </div>
+
+  <div class="menu__group reveal">
+    <h3 class="menu__title"><span>From the bar</span></h3>
+    <ul class="menu__list">
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Araku Pour‑over</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹220</span></div>
+        <p class="menu__desc">Single‑origin Araku Valley, hand‑brewed, floral and clean.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Flat White</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹180</span></div>
+        <p class="menu__desc">Double shot, silky steamed milk, served short.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Iced Latte, Jaggery</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹200</span></div>
+        <p class="menu__desc">Chilled, lightly sweetened with palm jaggery.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Masala Chai</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹120</span></div>
+        <p class="menu__desc">House blend, slow‑simmered, served in brass.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="menu__group reveal">
+    <h3 class="menu__title"><span>From the kitchen</span></h3>
+    <ul class="menu__list">
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Avocado on Sourdough</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹320</span></div>
+        <p class="menu__desc">House sourdough, smashed avocado, chili crisp, soft egg.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Garden Bowl</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹340</span></div>
+        <p class="menu__desc">Seasonal greens, roasted roots, millet, tahini dressing.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Olive‑oil Cake</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹180</span></div>
+        <p class="menu__desc">Baked each morning, orange zest, flaky salt.</p>
+      </li>
+      <li class="menu__item">
+        <div class="menu__row"><span class="menu__name">Banana Bread, Toasted</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">₹160</span></div>
+        <p class="menu__desc">Buttered on a cast iron, honey on the side.</p>
+      </li>
+    </ul>
+  </div>
+
+  <p class="menu__note reveal">A full card lives at the café. Allergen notes on request.</p>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gallery__head">
+    <p class="eyebrow reveal">The garden</p>
+    <h2 class="h2 reveal reveal--delay-1">Light, leaves, and the slow hum of a morning.</h2>
+  </div>
+  <div class="gallery__grid">
+
+    <!-- Panel 1: tall — single cup, overhead -->
+    <figure class="g-item g-item--tall reveal" aria-label="A cup of coffee from above">
+      <svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="800" fill="#214F3E"/>
+        <rect width="400" height="800" fill="url(#jaali)"/>
+        <g transform="translate(200 400)">
+          <circle r="150" fill="#F3EEE1"/>
+          <circle r="150" fill="none" stroke="#0F2318" stroke-opacity="0.1"/>
+          <circle r="110" fill="#2A1A0F"/>
+          <!-- latte art rosetta -->
+          <path d="M 0 -70 C -40 -20 -40 20 0 60 C 40 20 40 -20 0 -70 Z" fill="#F3EEE1" opacity="0.9"/>
+          <path d="M -40 -30 Q -70 0 -40 30" stroke="#F3EEE1" stroke-opacity="0.75" stroke-width="4" fill="none"/>
+          <path d="M 40 -30 Q 70 0 40 30" stroke="#F3EEE1" stroke-opacity="0.75" stroke-width="4" fill="none"/>
+        </g>
+      </svg>
+    </figure>
+
+    <!-- Panel 2: leaves pattern -->
+    <figure class="g-item reveal reveal--delay-1" aria-label="Monstera leaves">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="500" height="400" fill="#0F2318"/>
+        <g fill="#2E5A42" opacity="0.9">
+          <path d="M80 320 Q 20 220 100 120 Q 180 60 260 140 Q 220 240 160 300 Q 120 340 80 320 Z"/>
+          <path d="M0 160 Q 0 60 90 20 L 90 60 Q 20 90 20 170 Z" fill="#214F3E"/>
+        </g>
+        <!-- leaf cutouts -->
+        <g fill="#0F2318">
+          <ellipse cx="130" cy="200" rx="10" ry="26" transform="rotate(30 130 200)"/>
+          <ellipse cx="170" cy="150" rx="8"  ry="22" transform="rotate(45 170 150)"/>
+          <ellipse cx="100" cy="260" rx="7"  ry="18" transform="rotate(20 100 260)"/>
+        </g>
+        <g fill="#B38B47" opacity="0.7">
+          <path d="M320 60 Q 420 80 460 180 Q 440 320 320 340 Q 260 240 320 60 Z"/>
+        </g>
+        <path d="M320 60 Q 340 200 320 340" stroke="#0F2318" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+        <g fill="#0F2318" opacity="0.6">
+          <ellipse cx="360" cy="140" rx="7" ry="18"  transform="rotate(-30 360 140)"/>
+          <ellipse cx="400" cy="200" rx="6" ry="16"  transform="rotate(-30 400 200)"/>
+          <ellipse cx="360" cy="260" rx="7" ry="18"  transform="rotate(30 360 260)"/>
+        </g>
+      </svg>
+    </figure>
+
+    <!-- Panel 3: barista pouring -->
+    <figure class="g-item reveal reveal--delay-2" aria-label="Barista pouring coffee">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="500" height="400" fill="url(#paperWarm)"/>
+        <rect width="500" height="400" fill="url(#rings)" opacity="0.5"/>
+        <!-- hand / kettle silhouette -->
+        <g transform="translate(140 60)">
+          <path d="M30 10 L130 10 L140 50 L120 95 Q 70 100 25 90 Z" fill="#0F2318"/>
+          <path d="M140 40 L190 25 L195 55 L150 70 Z" fill="#0F2318"/>
+          <path d="M190 25 Q 240 25 240 70" stroke="#0F2318" stroke-width="8" fill="none"/>
+          <!-- pour stream -->
+          <path d="M60 95 Q 55 180 110 260" stroke="#2A1A0F" stroke-width="3" fill="none"/>
+        </g>
+        <!-- cup bottom center -->
+        <g transform="translate(160 300)">
+          <ellipse cx="90" cy="20" rx="100" ry="18" fill="#F3EEE1" stroke="#0F2318" stroke-width="2"/>
+          <ellipse cx="90" cy="20" rx="80" ry="12" fill="#2A1A0F"/>
+          <path d="M -10 25 Q 90 85 190 25 L 180 55 Q 90 95 0 55 Z" fill="#F3EEE1" stroke="#0F2318" stroke-width="2"/>
+        </g>
+      </svg>
+    </figure>
+
+    <!-- Panel 4: wide — garden courtyard scene -->
+    <figure class="g-item g-item--wide reveal reveal--delay-3" aria-label="Garden courtyard">
+      <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="1000" height="400" fill="url(#sunrise)"/>
+        <!-- distant foliage -->
+        <path d="M0 220 Q 150 150 350 230 T 700 220 T 1000 240 L1000 400 L0 400 Z" fill="#2E5A42"/>
+        <path d="M0 290 Q 200 240 500 290 T 1000 290 L1000 400 L0 400 Z" fill="#214F3E"/>
+        <!-- tables -->
+        <g fill="#8A6A2E">
+          <ellipse cx="200" cy="340" rx="60" ry="10"/>
+          <rect x="195" y="310" width="10" height="40"/>
+          <circle cx="200" cy="310" r="22"/>
+          <ellipse cx="520" cy="360" rx="80" ry="12"/>
+          <rect x="515" y="320" width="10" height="48"/>
+          <circle cx="520" cy="320" r="28"/>
+          <ellipse cx="820" cy="340" rx="60" ry="10"/>
+          <rect x="815" y="310" width="10" height="40"/>
+          <circle cx="820" cy="310" r="22"/>
+        </g>
+        <!-- cups on tables -->
+        <g fill="#F3EEE1">
+          <rect x="193" y="297" width="14" height="10" rx="2"/>
+          <rect x="513" y="305" width="14" height="12" rx="2"/>
+          <rect x="813" y="297" width="14" height="10" rx="2"/>
+        </g>
+        <!-- hanging bulb string -->
+        <path d="M0 60 Q 500 100 1000 60" stroke="#0F2318" stroke-opacity="0.5" fill="none"/>
+        <g fill="#F8E2B3">
+          <circle cx="150" cy="80" r="5"/><circle cx="320" cy="92" r="5"/><circle cx="500" cy="98" r="5"/>
+          <circle cx="680" cy="92" r="5"/><circle cx="850" cy="80" r="5"/>
+        </g>
+        <!-- foreground overhanging leaves -->
+        <g fill="#0F2318" opacity="0.85">
+          <path d="M0 0 Q 200 90 100 220 Q 20 150 0 60 Z"/>
+          <path d="M1000 0 Q 820 90 920 220 Q 1000 150 1000 60 Z"/>
+        </g>
+      </svg>
+    </figure>
+
+    <!-- Panel 5: breakfast plate overhead -->
+    <figure class="g-item reveal reveal--delay-4" aria-label="Breakfast plate from above">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="500" height="400" fill="#B38B47"/>
+        <rect width="500" height="400" fill="url(#rings)" opacity="0.4"/>
+        <circle cx="250" cy="200" r="150" fill="#F3EEE1"/>
+        <!-- toast -->
+        <rect x="130" y="150" width="130" height="100" rx="8" fill="#DCA86B"/>
+        <!-- avocado smear -->
+        <path d="M135 160 Q 200 140 250 180 Q 230 230 150 220 Z" fill="#2E5A42"/>
+        <!-- egg -->
+        <ellipse cx="200" cy="195" rx="30" ry="22" fill="#F3EEE1" stroke="#0F2318" stroke-opacity="0.1"/>
+        <circle cx="200" cy="195" r="12" fill="#F6D9A1"/>
+        <!-- side greens -->
+        <g fill="#214F3E">
+          <ellipse cx="330" cy="200" rx="8" ry="22" transform="rotate(30 330 200)"/>
+          <ellipse cx="320" cy="230" rx="8" ry="18" transform="rotate(50 320 230)"/>
+          <ellipse cx="345" cy="235" rx="7" ry="16" transform="rotate(10 345 235)"/>
+        </g>
+        <!-- fork -->
+        <g stroke="#0F2318" stroke-width="2" fill="none" transform="translate(90 290) rotate(-25)">
+          <line x1="0" y1="0" x2="80" y2="0"/>
+          <line x1="80" y1="-8" x2="80" y2="8"/>
+          <line x1="86" y1="-8" x2="86" y2="8"/>
+          <line x1="92" y1="-8" x2="92" y2="8"/>
+        </g>
+      </svg>
+    </figure>
+
+    <!-- Panel 6: tall — light through palms -->
+    <figure class="g-item g-item--tall reveal reveal--delay-5" aria-label="Sunlight through palm leaves">
+      <svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="800" fill="#0F2318"/>
+        <rect width="400" height="800" fill="url(#light)" style="mix-blend-mode:screen"/>
+        <!-- fronds -->
+        <g stroke="#2E5A42" stroke-width="3" fill="none">
+          <path d="M200 0 Q 200 250 100 400"/>
+          <path d="M200 0 Q 200 250 300 400"/>
+          <path d="M200 0 Q 170 300 60 500"/>
+          <path d="M200 0 Q 230 300 340 500"/>
+        </g>
+        <g fill="#214F3E">
+          <!-- little leaves -->
+          <g transform="translate(200 0)">
+            <ellipse cx="-10" cy="40"  rx="5" ry="18" transform="rotate(-30)"/>
+            <ellipse cx="10"  cy="40"  rx="5" ry="18" transform="rotate(30)"/>
+            <ellipse cx="-14" cy="90"  rx="5" ry="20" transform="rotate(-30)"/>
+            <ellipse cx="14"  cy="90"  rx="5" ry="20" transform="rotate(30)"/>
+            <ellipse cx="-18" cy="140" rx="5" ry="22" transform="rotate(-30)"/>
+            <ellipse cx="18"  cy="140" rx="5" ry="22" transform="rotate(30)"/>
+            <ellipse cx="-22" cy="200" rx="5" ry="24" transform="rotate(-30)"/>
+            <ellipse cx="22"  cy="200" rx="5" ry="24" transform="rotate(30)"/>
+            <ellipse cx="-26" cy="260" rx="5" ry="26" transform="rotate(-30)"/>
+            <ellipse cx="26"  cy="260" rx="5" ry="26" transform="rotate(30)"/>
+          </g>
+        </g>
+        <!-- bokeh dots -->
+        <g fill="#F8E2B3" opacity="0.4">
+          <circle cx="90" cy="200" r="12"/>
+          <circle cx="340" cy="320" r="18"/>
+          <circle cx="200" cy="520" r="10"/>
+          <circle cx="320" cy="600" r="14"/>
+          <circle cx="90" cy="700" r="20"/>
+        </g>
+      </svg>
+    </figure>
+
+  </div>
+</section>
+
+<section class="events" id="events">
+  <div class="events__head">
+    <p class="eyebrow reveal">What's on</p>
+    <h2 class="h2 reveal reveal--delay-1">Small gatherings, slow afternoons.</h2>
+  </div>
+  <div class="events__list">
+    <article class="event reveal">
+      <div class="event__date"><span class="event__d">SAT</span><span class="event__n">—</span><span class="event__m">Weekly</span></div>
+      <div class="event__body">
+        <h3 class="event__title">Acoustic Evenings</h3>
+        <p class="event__meta">Every Saturday · 6:30 pm — 8:30 pm</p>
+        <p>Local musicians play in the garden. No cover, no booking, pull up a chair.</p>
+      </div>
+      <a class="event__cta" href="https://wa.me/919573031888?text=Hi%20Mr.%20Bean%20—%20I%27d%20like%20a%20seat%20for%20Acoustic%20Evenings." rel="noopener">Save me a seat →</a>
+    </article>
+
+    <article class="event reveal reveal--delay-1">
+      <div class="event__date"><span class="event__d">SUN</span><span class="event__n">—</span><span class="event__m">Monthly</span></div>
+      <div class="event__body">
+        <h3 class="event__title">Coffee Cupping</h3>
+        <p class="event__meta">First Sunday · 10:00 am — 11:30 am</p>
+        <p>Taste three origins side by side. We walk you through what you're drinking.</p>
+      </div>
+      <a class="event__cta" href="https://wa.me/919573031888?text=Hi%20Mr.%20Bean%20—%20please%20hold%20a%20spot%20for%20the%20next%20Coffee%20Cupping." rel="noopener">Reserve a spot →</a>
+    </article>
+
+    <article class="event reveal reveal--delay-2">
+      <div class="event__date"><span class="event__d">THU</span><span class="event__n">—</span><span class="event__m">Fortnightly</span></div>
+      <div class="event__body">
+        <h3 class="event__title">Reader's Table</h3>
+        <p class="event__meta">Alternate Thursdays · 5:00 pm — 7:00 pm</p>
+        <p>Bring a book, share a pot, no phones at the long table. Tea on us.</p>
+      </div>
+      <a class="event__cta" href="https://wa.me/919573031888?text=Hi%20Mr.%20Bean%20—%20I%27d%20like%20to%20join%20the%20next%20Reader%27s%20Table." rel="noopener">Join the table →</a>
+    </article>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit__grid">
+    <div class="visit__info">
+      <p class="eyebrow reveal">Find us</p>
+      <h2 class="h2 reveal reveal--delay-1">Open daily, from the first cup to the last.</h2>
+
+      <dl class="visit__meta reveal reveal--delay-2">
+        <div><dt>Address</dt><dd>Bhimavaram, ASR Nagar<br/>West Godavari, Andhra Pradesh</dd></div>
+        <div><dt>Hours</dt><dd>Every day · 6:00 am — 9:00 pm</dd></div>
+        <div><dt>Reservations</dt><dd><a href="tel:+919573031888">+91 95730 31888</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://instagram.com/rahul.vuyyuri" rel="noopener">@rahul.vuyyuri</a></dd></div>
+      </dl>
+
+      <div class="visit__actions reveal reveal--delay-3">
+        <a class="btn btn--primary" href="https://wa.me/919573031888" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" focusable="false"><path d="M20 12a8 8 0 1 1-3.1-6.3L20 4l-1.5 3.1A8 8 0 0 1 20 12Zm-6 2.5-1.2-.6a1 1 0 0 0-1 .1l-.6.5a4.5 4.5 0 0 1-2-2l.5-.6a1 1 0 0 0 .1-1l-.6-1.2a1 1 0 0 0-1.3-.5c-.9.3-1.4 1.2-1.1 2.1A7 7 0 0 0 13 17c.9.3 1.9-.2 2.1-1.1a1 1 0 0 0-.5-1.3Z" fill="currentColor"/></svg>
+          Message on WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=ASR+Nagar+Bhimavaram+West+Godavari" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+
+    <div class="visit__map reveal" aria-label="Illustrated map of the neighbourhood">
+      <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+        <rect width="600" height="450" fill="url(#paperWarm)"/>
+        <!-- faint grid -->
+        <g stroke="#8A6A2E" stroke-opacity="0.12">
+          <path d="M0 60 H600 M0 150 H600 M0 240 H600 M0 330 H600 M0 420 H600"/>
+          <path d="M60 0 V450 M160 0 V450 M260 0 V450 M360 0 V450 M460 0 V450 M560 0 V450"/>
+        </g>
+        <!-- roads -->
+        <g stroke="#F3EEE1" stroke-width="18">
+          <path d="M-20 300 Q 240 260 620 320"/>
+          <path d="M300 -20 Q 290 220 310 470"/>
+        </g>
+        <g stroke="#DCA86B" stroke-width="2" stroke-dasharray="4 6" fill="none">
+          <path d="M-20 300 Q 240 260 620 320"/>
+          <path d="M300 -20 Q 290 220 310 470"/>
+        </g>
+        <!-- blocks -->
+        <g fill="#2E5A42" opacity="0.18">
+          <rect x="40" y="80" width="200" height="120" rx="6"/>
+          <rect x="360" y="80" width="200" height="120" rx="6"/>
+          <rect x="40" y="350" width="200" height="80"  rx="6"/>
+          <rect x="360" y="350" width="200" height="80" rx="6"/>
+        </g>
+        <!-- trees -->
+        <g fill="#214F3E">
+          <circle cx="140" cy="140" r="18"/>
+          <circle cx="100" cy="130" r="12"/>
+          <circle cx="460" cy="140" r="14"/>
+          <circle cx="430" cy="400" r="16"/>
+        </g>
+        <!-- pin on café -->
+        <g transform="translate(300 290)">
+          <circle r="40" fill="#B38B47" opacity="0.25"/>
+          <circle r="24" fill="#B38B47" opacity="0.4"/>
+          <path d="M0 -22 C -16 -22 -22 -10 -22 -2 C -22 10 0 24 0 24 S 22 10 22 -2 C 22 -10 16 -22 0 -22Z" fill="#0F2318"/>
+          <circle cx="0" cy="-4" r="7" fill="#F3EEE1"/>
+        </g>
+        <text x="300" y="340" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-style="italic" fill="#0F2318">Mr. Bean · ASR Nagar</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__wrap">
+    <p class="foot__brand">Mr. Bean</p>
+    <p class="foot__tag">Thoughtfully brewed. Beautifully served.</p>
+    <p class="foot__meta">© <span id="y"></span> Mr. Bean · Bhimavaram · Made with care.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
